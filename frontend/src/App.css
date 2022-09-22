@@ -1,0 +1,105 @@
+nav {
+    font-family: Poppins;
+  }
+  
+  .navbar-collapse {
+    text-align: center;
+  }
+  
+  nav {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  
+  nav a {
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    letter-spacing: 1px;
+  }
+  
+  nav a:hover{
+    text-decoration: underline;
+  }
+  
+  nav .logo {
+    font-family: 'Ms Madi';
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 0;
+    margin: 0rem 3rem 0rem 3rem;
+  }
+  
+  nav button {
+    margin: 0 0.8rem 0 0;
+  }
+
+.product-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+}
+
+.cardWidth{
+    width: 22vw;
+    margin-bottom: 2rem;
+}
+
+.card-text{
+    margin: 0 0 1rem 0;
+    color:rgb(125, 124, 124);
+    font-size: 0.9rem;
+}
+
+.card-image-container{
+    overflow: hidden;
+}
+
+.card-title{
+    font-size: 1.1rem;
+}
+
+.card-title a {
+    color: black;
+    text-decoration: none;
+}
+
+.card-image:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+    transition: transform .3s;
+}
+
+@media (max-width: 992px) {
+    .cardWidth{
+        width: 28vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardWidth{
+        width: 30vw;
+    }
+}
+
+@media (max-width: 576px) {
+    nav .logo{
+        font-size: 2rem;
+        margin: 0 1rem 0 1rem;
+      }
+
+    .cardWidth{
+        width: 40vw;
+    }
+
+    .bi{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 424px) {
+    .cardWidth{
+        width: 80vw;
+    }
+}

@@ -1,13 +1,17 @@
-
+import { data } from './data.js';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import HomeScreen from './screens/HomeScreen.js';
+import ProductScreen from './screens/ProductScreen.js';
 
 function App() {
   return (
+    <Router>
     <div className="App">
       <header className="App-header">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{backgroundColor: '#adb5bd'}}>
-          <div className="container-fluid">
-            <a className="navbar-brand logo" href="#">Fashion Hub</a>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light shadow ">
+          <div className="container-fluid" >
+            <Link className="navbar-brand logo" to="/">Fashion Hub</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -27,17 +31,24 @@ function App() {
                 </li>
               </ul>
               <form className="d-flex">
-                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button className="btn btn-secondary" type="submit"><i class="bi bi-search"></i></button>
-                <button className="btn btn-secondary" type="button"><i class="bi bi-person"></i></button>
-                <button className="btn btn-secondary" type="button"><i class="bi bi-bag"></i></button>
+                <input className="form-control me-2 shadow" type="search" placeholder="Search" aria-label="Search" />
+                <button className="btn btn-secondary shadow" type="submit"><i className="bi bi-search"></i></button>
+                <button className="btn btn-outline-secondary shadow" type="button"><i className="bi bi-person"></i></button>
+                <button className="btn btn-outline-secondary shadow" type="button"><i className="bi bi-bag"></i></button>
               </form>
             </div>
           </div>
         </nav>
-        <p>Test</p>
+        <br />
+        <main>
+          <Routes>
+            <Route path="/product/:slug" element={<ProductScreen />} />
+            <Route path="/" element={<HomeScreen />} />
+          </Routes>
+        </main>
       </header>
     </div>
+    </Router>
   );
 }
 

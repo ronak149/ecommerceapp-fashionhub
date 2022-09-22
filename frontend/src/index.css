@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+nav {
+  font-family: Poppins;
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+nav {
+
+}
+
+nav a {
+  margin: 0rem 0.5rem 0rem 0.5rem;
+  letter-spacing: 1px;
+}
+
+nav a:hover{
+  text-decoration: underline;
+}
+
+nav .logo {
+  font-family: 'Ms Madi';
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 0;
+  margin: 0rem 3rem 0rem 3rem;
+}
+
+nav button {
+  margin: 0 0.8rem 0 0;
+}

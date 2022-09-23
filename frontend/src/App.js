@@ -1,10 +1,13 @@
-import { data } from './data.js';
-import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen.js';
-import ProductScreen from './screens/ProductScreen.js';
+import MensProductsScreen from './screens/MensProductsScreen';
+import MensProductInfoScreen from './screens/MensProductInfoScreen.js';
+import WomensProductsScreen from './screens/WomensProductsScreen';
+import './App.css';
+import OnSaleScreen from './screens/OnSaleScreen.js';
 
 function App() {
+
   return (
     <Router>
     <div className="App">
@@ -18,23 +21,23 @@ function App() {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link" aria-current="page" href="#">Home</a>
+                  <Link className="nav-link" aria-current="page" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Men's</a>
+                  <Link className="nav-link" to="Mens/">Men's</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Women's</a>
+                  <Link className="nav-link" to="Womens/">Women's</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Sale</a>
+                  <Link className="nav-link" to="Sale/">Sale</Link>
                 </li>
               </ul>
               <form className="d-flex">
                 <input className="form-control me-2 shadow" type="search" placeholder="Search" aria-label="Search" />
                 <button className="btn btn-secondary shadow" type="submit"><i className="bi bi-search"></i></button>
                 <button className="btn btn-outline-secondary shadow" type="button"><i className="bi bi-person"></i></button>
-                <button className="btn btn-outline-secondary shadow" type="button"><i className="bi bi-bag"></i></button>
+                <Link className="btn btn-outline-secondary shadow" type="button"><i className="bi bi-bag"></i></Link>
               </form>
             </div>
           </div>
@@ -42,7 +45,12 @@ function App() {
         <br />
         <main>
           <Routes>
-            <Route path="/product/:slug" element={<ProductScreen />} />
+            <Route path="Mens/product/:slug" element={<MensProductInfoScreen />} />
+            <Route path="Mens/" element={<MensProductsScreen />} />
+            <Route path="Womens/product/:slug" element={<MensProductInfoScreen />} />
+            <Route path="Womens/" element={<WomensProductsScreen />} />
+            <Route path="Sale/product/:slug" element={<MensProductInfoScreen />} />
+            <Route path="Sale/" element={<OnSaleScreen />} />
             <Route path="/" element={<HomeScreen />} />
           </Routes>
         </main>

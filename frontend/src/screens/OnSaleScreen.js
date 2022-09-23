@@ -1,20 +1,42 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useReducer } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+const onSaleProductsReducer = (state, action) => {
+  switch(action.type){
+    case 'FETCH_REQUEST':
+      return {...state, loading: false};
+    case 'FETCH_SUCCESS':
+      return {...state, onSaleProducts: action.payload, loading: false};
+    case 'FETCH_FAIL':
+      return {...state, loading:false, error: action.payload};
+    default:
+      return state;
+  }
+}
+
 const OnSaleScreen = () => {
 
-  const [onSaleProducts, setOnSaleProducts] = useState([]);
+  const [{onSaleProducts, loading, error}, dispatch] = useReducer(onSaleProductsReducer, {
+    onSaleProducts: [],
+    loading: true,
+    error: '',
+  });
 
   useEffect(() => {
     const fetchData = async () => {
-
+      dispatch({ type: 'FETCH_REQUEST' });
+      try {
         const result = await axios.get('/api/products');
         let saleItems = [];
         for(const property in result.data){
             saleItems.push(result.data[property].filter((item) => item.promotion.onSale === true));
         }
-        setOnSaleProducts(saleItems.flat());
+        dispatch({ type: 'FETCH_SUCCESS', payload: saleItems.flat() });
+      }
+      catch (err) {
+        dispatch({ type: 'FETCH_FAIL', payload: err.message });
+      }
     }
     fetchData();
   }, []);
@@ -22,7 +44,8 @@ const OnSaleScreen = () => {
     return(
         <section id="product-container" className="d-flex flex-row justify-content-around flex-wrap align-content-around">
           {
-            onSaleProducts.map((product) => (
+            loading ? (<div>Loading...</div>) : error ? (<div>{error}</div>) :
+            (onSaleProducts.map((product) => (
               <div className="card cardWidth shadow " key={product.id}>
                 <div className="card-image-container">
                   <Link to={`product/${product.slug}`}>
@@ -37,7 +60,7 @@ const OnSaleScreen = () => {
                 </div>
               </div>
             ))
-          }
+          )}
           </section>
     );
 }

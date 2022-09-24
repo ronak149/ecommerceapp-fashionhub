@@ -1,5 +1,5 @@
 #cart-container {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 #cart-container .cart-container-header {
@@ -13,14 +13,12 @@
 
 #cart-container .cart-items-container {
     height: auto;
-    width: 62%;
-    background-color: aqua;
+    width: 56%;
 }
 
 #cart-container .cart-item-card {
     height: 25vh;
     width: 100%;
-    border: 1px solid black;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -28,30 +26,76 @@
 }
 
 #cart-container .card-image-container {
-    width: 30%;
+    width: 28%;
     height: 100%;
     overflow: hidden;
+    text-align: center;
 }
 
 #cart-container .card-image {
     width: 100%;
-    height: 120%;
+    height: 130%;
 }
 
 #cart-container .cart-item-body {
     width: 65%;
-    border: 1px solid red;
 }
 
 #cart-container .cart-item-header{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+#cart-container .form-select-label {
+    color: grey;
+}
+
+#cart-container .form-select {
+    width: auto;
+    display: inline-block;
+    margin: 0 0 0 1rem;
 }
 
 #cart-container .cart-summary-container {
-    width: 36%;
-    background-color: rgb(0, 47, 255);
+    width: 40%;
+    height: auto;
+    padding: 0 2rem 0 2rem;
+    background-color: #f3f3f3;
+}
 
+#cart-container th {
+    font-weight: 600;
+}
+
+@media (max-width: 800px) {
+    #cart-container .cart-items-container {
+        height: auto;
+        width: 100%;
+    }
+
+    #cart-container .cart-summary-container {
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 575.98px) { 
+    
+    #cart-container .cart-item-card {
+        height: 20vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    } 
+
+    #cart-container .card-image-container {
+        width: 32%;
+        height: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
 }

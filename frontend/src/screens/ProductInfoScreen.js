@@ -1,6 +1,7 @@
-import { useEffect, useReducer } from 'react';
-import { useParams } from 'react-router-dom';
+import { useContext, useEffect, useReducer } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+import { Store } from '../Store';
 
 const productInfoReducer = (state, action) => {
     switch(action.type) {
@@ -16,6 +17,7 @@ const productInfoReducer = (state, action) => {
 }
 
 const ProductInfoScreen = () => {
+    const navigate = useNavigate();
     const params = useParams();
     const {slug} = params;
 
@@ -39,37 +41,50 @@ const ProductInfoScreen = () => {
         fetchData();
     }, [slug]);
 
+    const { state, dispatch: ctxDispatch } = useContext(Store);
+    const { cart } = state;
+
+    const addToCartHandler =  async () => {
+        const existItem = cart.cartItems.find((item) => item._id === product._id);
+        const quantity = existItem ? existItem.quantity + 1 : 1 ;
+        const { data } = await axios.get(`/api/products/${product._id}`);
+        if(data.quantityInStock < quantity) {
+            window.alert('Sorry, Product out of stock');
+            return;
+        }
+        ctxDispatch({type: 'ADD_TO_CART', payload: {...product, quantity }});
+        navigate('/Cart');
+    }
+
     return (
         loading ? <div>Loading...</div> 
         : error ? (<div>{error}</div>) 
         :
         <div style={{margin: 0, padding: '1rem'}}>
-        <div class="card" >
-            <div class="row  row-cols-4">
-                <div class="col-4" style={{textAlign: 'center', overflow: 'hidden', margin: 'auto'}}>
-                    <img class="" src={product.src} alt="Card image" style={{height: '75vh', width: '65vh'}} />
+        <div className="card" >
+            <div className="row  row-cols-4">
+                <div className="col-4" style={{textAlign: 'center', overflow: 'hidden', margin: 'auto'}}>
+                    <img className="" src={product.src} alt="Card image" style={{height: '75vh', width: '65vh'}} />
                 </div>
-                <div class="col-8 d-flex flex-column justify-content-between card-body" style={{padding: '2rem'}}>
-                    <div class="row">
-                            <h4 class="">{product.title}</h4>
+                <div className="col-8 d-flex flex-column justify-content-between card-body" style={{padding: '2rem'}}>
+                    <div className="row">
+                            <h4 className="">{product.title}</h4>
                     </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <h5 class="">$ {product.price}.00</h5>
+                    <div className="row">
+                        <div className="col-6">
+                            <h5 className="">$ {product.price}.00</h5>
                         </div>
-                        <div class="col-4">
-                            <h5 style={{color: 'red'}}>{(product.promotion.onSale === true ) ? 'Extra ' + product.promotion.discount + '% OFF': ''}</h5>
-                        </div>
+
                     </div>
-                    <div class="row">
-                            <h5 class="">{product.color} | Large</h5>
+                    <div className="row">
+                            <h5 className="">{product.color} | Large</h5>
                     </div>
-                    <div class="row">
-                            <h3 class=""><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> <span style={{fontSize: '1rem', paddingLeft: '1rem'}}>{product.numOfReviews} reviews</span></h3>
+                    <div className="row">
+                            <h3 className=""><i className="bi bi-star-fill"></i><i className="bi bi-star-fill"></i><i className="bi bi-star-fill"></i><i className="bi bi-star-fill"></i><i className="bi bi-star-half"></i> <span style={{fontSize: '1rem', paddingLeft: '1rem'}}>{product.numOfReviews} reviews</span></h3>
                     </div>
-                    <div class="row">
-                        <div class="col-2">
-                            <label for="quantity">Qty: </label>
+                    <div className="row">
+                        <div className="col-2">
+                            <label htmlFor="quantity">Qty: </label>
                                                 <select className="form-select form-select-sm" name="quantity" id="quantity">
                                                     <option value="volvo">1</option>
                                                     <option value="saab">2</option>
@@ -78,20 +93,21 @@ const ProductInfoScreen = () => {
                                                 </select>
                         </div>
                     </div>
-                    <div class="row">
-                            <h6 class="">{product.description}</h6>
+                    <div className="row">
+                            <h6 className="">{product.description}</h6>
                     </div>
-                    <div class="row">
-                        <div class="col-8">
-                            <i class="bi bi bi-check2-circle" style={{color: '#00c900'}}><span style={{fontWeight: '400', color: 'grey', fontSize: '1rem'}}>In Stock</span></i>
+                    <div className="row">
+                        <div className="col-8">
+                            {product.quantityInStock === 0 ? <i className="bi-slash-circle danger" style={{color: 'red'}} ><span style={{fontWeight: '400', color: 'grey', fontSize: '1rem'}}>  {' '} Item out of stock</span></i> : <i className="bi bi bi-check2-circle" style={{color: '#00c900'}}><span style={{fontWeight: '400', color: 'grey', fontSize: '1rem'}}>  {' '} In Stock</span></i>}
+                            
                         </div>
-                        <div class="col-4">
+                        <div className="col-4">
                             <h5>${product.price}.00</h5>
                         </div>
                     </div>
-                    <div class="row" style={{textAlign: 'center'}}>
+                    <div className="row" style={{textAlign: 'center'}}>
                         <div className="col">
-                        <button className="btn btn-outline-secondary shadow" type="button" style={{width: '80%'}}>Add to Cart <i class="bi bi-arrow-right"></i></button>
+                        <button className="btn btn-outline-primary shadow" type="button" style={{width: '90%'}} onClick={addToCartHandler}> Add to Cart <i className="bi bi-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>

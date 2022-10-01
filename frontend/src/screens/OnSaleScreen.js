@@ -28,7 +28,7 @@ const OnSaleScreen = () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const result = await axios.get('/api/products');
-        dispatch({ type: 'FETCH_SUCCESS', payload: result.data.filter((product) => product.promotion.onSale === true) });
+        dispatch({ type: 'FETCH_SUCCESS', payload: result.data.filter((product) => product.onSale === true) });
       }
       catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
@@ -43,7 +43,8 @@ const OnSaleScreen = () => {
             loading ? (<div>Loading...</div>) : error ? (<div>{error}</div>) :
             (onSaleProducts.map((product) => (
               <Product 
-                product={product}
+                product={ product }
+                key = { product.slug }
               />
             ))
           )}

@@ -43,6 +43,7 @@ const MensProductsScreen = () => {
             (mensProducts.map((product) => (
               <Product 
                 product={product}
+                key={product.slug}
               />
             )))
           }

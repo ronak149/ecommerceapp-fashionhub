@@ -79,6 +79,20 @@ nav {
     transition: transform .3s;
 }
 
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 24px;
+  border: 0;
+  border-radius: 50%;
+  background-image: url('./check-circle.svg');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor:default;
+}
+
 @media (max-width: 992px) {
     .cardWidth{
         width: 28vw;

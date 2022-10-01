@@ -1,6 +1,18 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Store } from "../Store";
 
 const HeaderScreen = () => {
+    const { state, dispatch: ctxDispatch } = useContext(Store);
+    const { cart, userInfo } = state;
+
+    const signoutHandler = () => {
+        ctxDispatch({ type: 'USER_SIGNOUT'});
+        localStorage.removeItem('userInfo');
+        localStorage.removeItem('shippingAddress');
+        localStorage.removeItem('paymentMethod');
+    }
+
     return (
         <header className="App-header">
             <nav className="navbar navbar-expand-lg navbar-light bg-light shadow ">
@@ -26,9 +38,21 @@ const HeaderScreen = () => {
                         </ul>
                         <form className="d-flex">
                             <input className="form-control me-2 shadow" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-secondary shadow" type="submit"><i className="bi bi-search"></i></button>
-                            <button className="btn btn-outline-secondary shadow" type="button"><i className="bi bi-person"></i></button>
-                            <Link className="btn btn-outline-secondary shadow" type="button" to="Cart/"><i className="bi bi-bag"></i></Link>
+                            <button className="btn btn-primary shadow" type="submit"><i className="bi bi-search"></i></button>
+                            { userInfo ? 
+                            (<div className="dropdown">
+                                <button className="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {userInfo.name} <i class="bi bi-person-circle"></i>
+                                </button>
+                                <ul className="dropdown-menu">
+                                    <li><Link className="dropdown-item" to="/profile">Profile</Link></li>
+                                    <li><Link className="dropdown-item" to="/orderHistory">Order History</Link></li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><Link className="dropdown-item" to="#signout" onClick={signoutHandler}>Sign Out</Link></li>
+                                </ul>
+                            </div>) 
+                            : (<Link className="btn btn-outline-primary shadow" type="button" to="/SignIn"><i className="bi bi-person"></i></Link>)}                            
+                            <Link className="btn btn-outline-primary shadow position-relative" type="button" to="/cart"><i className="bi bi-bag"></i><span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{cart.cartItems.length > 0 && cart.cartItems.reduce((a, c) => a + c.quantity, 0)}</span></Link>
                         </form>
                     </div>
                 </div>

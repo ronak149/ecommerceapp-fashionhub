@@ -115,7 +115,7 @@ const ShippingScreen = () => {
                     <input type="number" className="form-control" id="inputPhNumber" value={phNumber} onChange={(e) => setPhNumber(e.target.value)} required/>
                 </div>
                 <div className="col-12 mb-3">
-                    <button type="submit" className="btn btn-primary">Continue <i class="bi bi-arrow-right"></i></button>
+                    <button type="submit" className="btn-fill rounded">Continue <i class="bi bi-arrow-right"></i></button>
                 </div>
                 </form>
         </div>

@@ -48,7 +48,7 @@ const SignUpScreen = () => {
 
     return (
         <div id="sign-in-form-container" className="container-fluid card sign-in-form-container p-4">
-            <form className="row g-2 needs-validation" noValidate onSubmit={submitHandler}>
+            <form className="row g-2 needs-validation" onSubmit={submitHandler}>
                 <div className="col-md-1"></div>
                 <div className="col-md-10 mt-3 mb-2">
                 <h4 className="fw-bolder">Sign Up</h4>
@@ -96,7 +96,7 @@ const SignUpScreen = () => {
 
                 <div className="col-md-1"></div>
                 <div className="col-md-10 text-center ">
-                    <button className="btn btn-primary sign-in-button" type="submit">Sign Up</button>
+                    <button className="btn-fill rounded" type="submit">Sign Up</button>
                 </div>
                 <div className="col-md-1"></div>
 

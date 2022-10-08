@@ -31,7 +31,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "102",
@@ -48,7 +48,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "103",
@@ -65,7 +65,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "104",
@@ -82,7 +82,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "105",
@@ -99,7 +99,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "106",
@@ -116,7 +116,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "107",
@@ -133,7 +133,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "108",
@@ -150,7 +150,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "109",
@@ -167,7 +167,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "110",
@@ -184,7 +184,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "111",
@@ -201,7 +201,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "112",
@@ -218,7 +218,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "113",
@@ -235,7 +235,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "114",
@@ -252,7 +252,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "115",
@@ -269,7 +269,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "116",
@@ -286,7 +286,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "117",
@@ -303,7 +303,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% jeans material. The product uses super soft, pre-shrunk jeans for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "118",
@@ -320,7 +320,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% jeans material. The product uses super soft, pre-shrunk jeans for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "119",
@@ -337,7 +337,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% jeans material. The product uses super soft, pre-shrunk jeans for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "120",
@@ -354,7 +354,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "121",
@@ -371,7 +371,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "122",
@@ -388,7 +388,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "123",
@@ -405,7 +405,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "124",
@@ -422,7 +422,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "125",
@@ -439,7 +439,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "126",
@@ -456,7 +456,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "127",
@@ -473,7 +473,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "128",
@@ -490,7 +490,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "149",
@@ -507,7 +507,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Specially designed and cut for your comfort and fit. this is a hand sewen product and made locally.'
         },
         {
             //_id: "150",
@@ -524,7 +524,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Specially designed and cut for your comfort and fit. this is a hand sewen product and made locally.'
         },
         {
             //_id: "151",
@@ -541,7 +541,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Specially designed and cut for your comfort and fit. this is a hand sewen product and made locally.'
         },
         {
             //_id: "152",
@@ -558,7 +558,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Specially designed and cut for your comfort and fit. this is a hand sewen product and made locally.'
         },
         {
             //_id: "153",
@@ -575,7 +575,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Specially designed and cut for your comfort and fit. this is a hand sewen product and made locally.'
         },
         {
             //_id: "129",
@@ -592,7 +592,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "130",
@@ -609,7 +609,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% leather material. The product uses super soft, pre-shrunk leather for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "131",
@@ -626,7 +626,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% leather material. The product uses super soft, pre-shrunk leather for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "201",
@@ -643,7 +643,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "202",
@@ -660,7 +660,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "203",
@@ -677,7 +677,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "204",
@@ -694,7 +694,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "205",
@@ -711,7 +711,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "206",
@@ -728,7 +728,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "207",
@@ -745,7 +745,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "208",
@@ -762,7 +762,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "209",
@@ -779,7 +779,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "210",
@@ -796,7 +796,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "211",
@@ -813,7 +813,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% jeans material. The product uses super soft, pre-shrunk jeans for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "212",
@@ -830,7 +830,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% jeans material. The product uses super soft, pre-shrunk jeans for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "213",
@@ -847,7 +847,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% jeans material. The product uses super soft, pre-shrunk jeans for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "214",
@@ -864,7 +864,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "215",
@@ -881,7 +881,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "216",
@@ -898,7 +898,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "217",
@@ -915,7 +915,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "218",
@@ -932,7 +932,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "219",
@@ -949,7 +949,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "220",
@@ -966,7 +966,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "221",
@@ -983,7 +983,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "222",
@@ -1000,7 +1000,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Specially designed and cut for your comfort and fit. this is a hand sewen product and made locally.'
         },
         {
             //_id: "223",
@@ -1017,7 +1017,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Specially designed and cut for your comfort and fit. this is a hand sewen product and made locally.'
         },
         {
             //_id: "224",
@@ -1034,7 +1034,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Specially designed and cut for your comfort and fit. this is a hand sewen product and made locally.'
         },
         {
             //_id: "225",
@@ -1051,7 +1051,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Specially designed and cut for your comfort and fit. this is a hand sewen product and made locally.'
         },
         {
             //_id: "226",
@@ -1068,7 +1068,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Specially designed and cut for your comfort and fit. this is a hand sewen product and made locally.'
         },
         {
             //_id: "227",
@@ -1085,7 +1085,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Specially designed and cut for your comfort and fit. this is a hand sewen product and made locally.'
         },
         {
             //_id: "228",
@@ -1102,7 +1102,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% leather material. The product uses super soft, pre-shrunk leather for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "229",
@@ -1119,7 +1119,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% leather material. The product uses super soft, pre-shrunk leather for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "230",
@@ -1136,7 +1136,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         },
         {
             //_id: "231",
@@ -1153,7 +1153,7 @@ export const data = {
             quantityInStock: 10,
             ratings: 4.5,
             numOfReviews: 10,
-            description: '100% Cotton Material'
+            description: 'Made using 100% Cotton material. The product uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewen locally for the best fit and comfort.'
         }
     ],
 

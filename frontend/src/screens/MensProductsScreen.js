@@ -5,7 +5,7 @@ import axios from 'axios';
 const mensProductsReducer = (state, action) => {
   switch(action.type){
     case 'FETCH_REQUEST':
-      return {...state, loading: false};
+      return {...state, loading: true};
     case 'FETCH_SUCCESS':
       return {...state, mensProducts: action.payload, loading: false};
     case 'FETCH_FAIL':
@@ -39,14 +39,14 @@ const MensProductsScreen = () => {
 
     return(
         <section id="product-container" className="d-flex flex-row justify-content-around flex-wrap align-content-around">
-          {  loading ? (<div>Loading...</div>) : error ? (<div>{error}</div>) :
-            (mensProducts.map((product) => (
-              <Product 
-                product={product}
-                key={product.slug}
-              />
-            )))
-          }
+            {  loading ? (<div>Loading...</div>) : error ? (<div>{error}</div>) :
+              (mensProducts.map((product) => (
+                <Product 
+                  product={product}
+                  key={product.slug}
+                />
+              )))
+            }
         </section>
     );
 }

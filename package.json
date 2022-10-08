@@ -1,0 +1,27 @@
+{
+  "name": "fashionhub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "react-router-dom": "^6.4.1",
+    "use-reducer-logger": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
+    "start": "node backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronak149/ecommrceapp-fashionhub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronak149/ecommrceapp-fashionhub/issues"
+  },
+  "homepage": "https://github.com/ronak149/ecommrceapp-fashionhub#readme"
+}

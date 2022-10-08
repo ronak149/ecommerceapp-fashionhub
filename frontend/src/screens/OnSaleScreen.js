@@ -5,7 +5,7 @@ import axios from 'axios';
 const onSaleProductsReducer = (state, action) => {
   switch(action.type){
     case 'FETCH_REQUEST':
-      return {...state, loading: false};
+      return {...state, loading: true};
     case 'FETCH_SUCCESS':
       return {...state, onSaleProducts: action.payload, loading: false};
     case 'FETCH_FAIL':

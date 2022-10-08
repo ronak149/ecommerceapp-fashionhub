@@ -1,32 +1,27 @@
 nav {
     font-family: Poppins;
+    background-color: #202938;
+    padding: 1rem;
+    color: white;
   }
   
   .navbar-collapse {
     text-align: center;
   }
   
-  nav {
-    padding: 1rem;
-
-  }
-  
   nav a {
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-    letter-spacing: 1px;
+    margin: 0.5rem;
   }
   
   nav a:hover{
     text-decoration: underline;
+    color: black;
   }
   
-  nav .logo {
-    font-family: 'Megrim';
-    font-size: 2.5rem;
-    font-weight: bold;
-    padding: 0;
-    margin: 0rem 3rem 0rem 3rem;
+  nav input {
+    margin: 0.5rem;
   }
+
   
   nav button {
     margin: 0 0.8rem 0 0;
@@ -39,6 +34,17 @@ nav {
   nav form input {
     margin: 0.5rem 0rem 0.5rem 0.5rem;
   }
+
+.category-links {
+  text-decoration: none;
+  color: grey;
+  font-size: 12px;
+}
+
+.category-links:hover {
+  text-decoration: underline;
+  color: black;
+}
 
 .product-container {
     display: flex;
@@ -79,6 +85,49 @@ nav {
     transition: transform .3s;
 }
 
+.card-btn {
+  color: #311b92;
+  background-color: white;
+  border: 1px solid #311b92;
+  transition-duration: 0.4s;
+  height: 2.5rem;
+}
+
+.card-btn:hover {
+  color: white;
+  background-color: #311b92;
+}
+
+.btn-fill {
+  color: white;
+  background-color: #311b92;
+  border: 1px solid #311b92;
+  transition-duration: 0.4s;
+  height: 2.5rem;
+  width: 10rem;
+}
+
+.btn-fill:hover {
+  color: #311b92;
+  background-color: white;
+  border: 1px solid #311b92;
+}
+
+.btn-outline {
+  color: #311b92;
+  border: 1px solid #311b92;
+  text-decoration: none;
+  background-color: white;
+  padding: 0.5rem;
+  transition-duration: 0.4s;
+}
+
+.btn-outline:hover {
+  color: white;
+  background-color: #311b92;
+  border: 1px solid #311b92;
+}
+
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -91,6 +140,36 @@ nav {
   background-position: center center;
   background-repeat: no-repeat;
   cursor:default;
+}
+
+.progress {
+  background-color: #311b924e;
+  border: 1px solid #311b9281  
+}
+
+.progress .progress-bar {
+  background-color: #311b92;
+}
+
+.active-steps input[type=range]::-webkit-slider-runnable-track {
+  background-color: #311b924e;
+  border: 1px solid #311b9281
+}
+
+.active-steps input[type=range]::-webkit-slider-thumb {
+  background-color: #311b92;
+}
+
+.text-indigo {
+  color: #311b92;
+}
+
+footer a {
+  color: black;
+}
+
+footer a:hover{
+  color: grey;
 }
 
 @media (max-width: 992px) {

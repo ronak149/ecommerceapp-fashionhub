@@ -75,7 +75,7 @@ const SignInScreen = () => {
 
                 <div className="col-md-1"></div>
                 <div className="col-md-10 text-center ">
-                    <button className="btn btn-primary sign-in-button" type="submit">Sign In</button>
+                    <button className="btn-fill rounded" type="submit">Sign In</button>
                 </div>
                 <div className="col-md-1"></div>
 

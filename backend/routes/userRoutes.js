@@ -24,19 +24,25 @@ userRouter.post('/signin', expressAsyncHandler(async (req, res) => {
 }));
 
 userRouter.post('/signup', expressAsyncHandler(async (req, res) => {
-    const newUser = new User({
-        name: req.body.fullName,
-        email: req.body.email,
-        password: bcrypt.hashSync(req.body.password),
-    });
-    const user = await newUser.save();
-    res.send({
-        _id: user._id,
-        name: user.name,
-        email: user.email,
-        isAdmin: user.isAdmin,
-        token: generateToken(user)
-    });
+    const userExists = await User.findOne({ email: req.body.email });
+    if(userExists){
+        res.status(401).send({ message: 'User already exists !' });
+    }
+    else {
+        const newUser = new User({
+            name: req.body.fullName,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password),
+        });
+        const user = await newUser.save();
+        res.send({
+            _id: user._id,
+            name: user.name,
+            email: user.email,
+            isAdmin: user.isAdmin,
+            token: generateToken(user)
+        });
+    }
 }));
 
 userRouter.put('/update-profile', isAuth, expressAsyncHandler(async (req, res) => {

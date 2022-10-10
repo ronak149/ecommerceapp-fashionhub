@@ -4,14 +4,14 @@ const orderSchema = new mongoose.Schema(
     {        
         orderItems: [
             {
-                slug: {type: String, required: true, unique: true},
+                slug: {type: String, required: true},
                 gender: {type: String, required: true},
                 category: {type: String, required: true},
                 collectionSeason: {type: String, required: true},
                 title: {type: String, required: true},
                 price: {type: Number, required: true},
                 color: {type: String, required: true},
-                src: {type: String, required: true, unique: true},
+                src: {type: String, required: true},
                 description: {type: String, required: true},
                 product: {
                     type: mongoose.Schema.Types.ObjectId,
@@ -25,8 +25,8 @@ const orderSchema = new mongoose.Schema(
             fullName: { type: String, required: true },
             email: { type: String, required: true },
             phNumber: { type: Number, required: true },
-            add1: { type: Number, required: true },
-            add2: { type: String, required: true },
+            add1: { type: String, required: true },
+            add2: { type: Number, required: true },
             city: { type: String, required: true },
             postal: { type: String, required: true },
             province: { type: String, required: true },

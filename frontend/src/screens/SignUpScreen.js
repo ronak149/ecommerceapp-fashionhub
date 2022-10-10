@@ -19,8 +19,24 @@ const SignUpScreen = () => {
     const { state, dispatch: ctxDispatch } = useContext(Store);
     const { userInfo } = state;
 
+    const regexLength = /.{8,}/;
+    const regexUppercase = /(?=.*[A-Z])/;
+    const regexLowercase = /(?=.*[a-z])/;
+    const regexNumber = /(?=.*[0-9])/;
+    const regexSpecialChar = /(?=.*[!@#$&*])/;
+
     const submitHandler = async (e) => {
         e.preventDefault();
+        if(email){
+            let re=/\S+@[a-zA-Z]+\.com+/;
+            if(re.test(email)){
+                
+            }
+            else {
+                toast.error('Please enter a valid email')
+                return;
+            }
+        }
         if(password !== retypePassword){
             toast.error('Passwords do not match');
             return;
@@ -36,7 +52,7 @@ const SignUpScreen = () => {
             navigate(redirect || '/');
         }
         catch (err) {
-            toast.error(err.message);
+            toast.error('User already exists !');
         }
     }
 
@@ -57,7 +73,7 @@ const SignUpScreen = () => {
 
                 <div className="col-md-1"></div>
                 <div className="col-md-10">
-                    <label htmlFor="full-name-signup" className="form-label" >Full Name</label>
+                    <label htmlFor="full-name-signup" className="form-label" >Name</label>
                     <input type="text" className="form-control" id="full-name-signup" value={fullName} onChange={(e) => setFullName(e.target.value)} required />
                 </div>
                 <div className="col-md-1"></div>
@@ -65,14 +81,23 @@ const SignUpScreen = () => {
                 <div className="col-md-1"></div>
                 <div className="col-md-10">
                     <label htmlFor="email-signup" className="form-label" >Email</label>
-                    <input type="text" className="form-control" id="email-signup" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                    <input type="text" className="form-control" id="email-signup" value={email} onChange={(e) => setEmail(e.target.value)} pattern="^\S+@[a-zA-Z]+\.com+$" required />
                 </div>
                 <div className="col-md-1"></div>
 
                 <div className="col-md-1"></div>
                 <div className="col-md-10">
                     <label htmlFor="password-signup" className="form-label">Password</label>
-                    <input type="password" className="form-control" id="password-signup" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                    <input type="password" className="form-control" id="password-signup" value={password} onChange={(e) => setPassword(e.target.value)} pattern="^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{8,}$" required />
+                    { password.length > 0 &&
+                        (<div className="m-2 mx-4">
+                            <small className={regexLength.test(password) ? 'text-success' : 'text-danger'}><p className="form-label p-0 m-0">{regexLength.test(password) ? <i class="bi bi-check-circle-fill"></i> : <i class="bi bi-x-circle-fill"></i>} &nbsp; 8 characters long</p></small>
+                            <small className={regexUppercase.test(password) ? 'text-success' : 'text-danger'}><p className="form-label p-0 m-0">{regexUppercase.test(password) ? <i class="bi bi-check-circle-fill"></i> : <i class="bi bi-x-circle-fill"></i>} &nbsp; 1 Uppercase </p></small>
+                            <small className={regexLowercase.test(password) ? 'text-success' : 'text-danger'}><p className="form-label p-0 m-0">{regexLowercase.test(password) ? <i class="bi bi-check-circle-fill"></i> : <i class="bi bi-x-circle-fill"></i>} &nbsp; 1 Lowercase </p></small>
+                            <small className={regexNumber.test(password) ? 'text-success' : 'text-danger'}><p className="form-label p-0 m-0">{regexNumber.test(password) ? <i class="bi bi-check-circle-fill"></i> : <i class="bi bi-x-circle-fill"></i>} &nbsp; 1 Number and </p></small>
+                            <small className={regexSpecialChar.test(password) ? 'text-success' : 'text-danger'}><p className="form-label p-0 m-0">{regexSpecialChar.test(password) ? <i class="bi bi-check-circle-fill"></i> : <i class="bi bi-x-circle-fill"></i>} &nbsp; 1 Special Character</p></small>
+                        </div>)
+                    }
                 </div>
                 <div className="col-md-1"></div>
 
@@ -80,6 +105,11 @@ const SignUpScreen = () => {
                 <div className="col-md-10">
                     <label htmlFor="retype-password-signup" className="form-label">Retype Password</label>
                     <input type="password" className="form-control" id="retype-password-signup" value={retypePassword} onChange={(e) => setRetypePassword(e.target.value)} required />
+                    { retypePassword.length > 0 &&
+                        (<div className="m-2 mx-4">
+                            <small className={password === retypePassword ? 'text-success' : 'text-danger'}><p className="form-label p-0 m-0">{ password === retypePassword ? <i class="bi bi-check-circle-fill"></i> : <i class="bi bi-x-circle-fill"></i>} &nbsp; Passwords must match</p></small>
+                        </div>)
+                    }
                 </div>
                 <div className="col-md-1"></div>
 

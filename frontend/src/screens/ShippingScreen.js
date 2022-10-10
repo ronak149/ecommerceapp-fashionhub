@@ -11,12 +11,12 @@ const ShippingScreen = () => {
 
     const [fullName, setFullName] = useState(shippingAddress.fullName || '');
     const [email, setEmail] = useState(shippingAddress.email || '');
-    const [add1, setAdd1] = useState(shippingAddress.add1 || '');
-    const [add2, setAdd2] = useState(shippingAddress.add2 || '');
+    const [add1, setAdd1] = useState(shippingAddress.add1 || '' );
+    const [add2, setAdd2] = useState(shippingAddress.add2 || '' );
     const [city, setCity] = useState(shippingAddress.city || '');
     const [province, setProvince] = useState(shippingAddress.province || '');
     const [postal, setPostal] = useState(shippingAddress.postal || '');
-    const [phNumber, setPhNumber] = useState(shippingAddress.phNumber || '');
+    const [phNumber, setPhNumber] = useState(shippingAddress.phNumber || '' );
 
     const onShippingSubmitHandler = (e) => {
         e.preventDefault();
@@ -27,11 +27,11 @@ const ShippingScreen = () => {
                 fullName,
                 email,
                 add1,
-                add2,
+                add2: Number(add2),
                 city,
                 province,
                 postal,
-                phNumber
+                phNumber: Number(phNumber)
             }
         });
 
@@ -77,11 +77,11 @@ const ShippingScreen = () => {
                 </div>
                 <div className="col-md-3">
                     <label for="inputAddress1" className="form-label">Address 1</label>
-                    <input type="text" className="form-control" id="inputAddress1" placeholder="# Apartment Number" value={add1} onChange={(e) => setAdd1(e.target.value)} />
+                    <input type="number" className="form-control" id="inputAddress1" placeholder="# Apartment Number" value={add2} onChange={(e) => setAdd2(e.target.value)} />
                 </div>
                 <div className="col-md-9">
                     <label for="inputAddress2" className="form-label">Address 2</label>
-                    <input type="text" className="form-control" id="inputAddress2" placeholder="Street Number and Address" value={add2} onChange={(e) => setAdd2(e.target.value)} required/>
+                    <input type="text" className="form-control" id="inputAddress2" placeholder="Street Number and Address" value={add1} onChange={(e) => setAdd1(e.target.value)} required/>
                 </div>
                 <div className="col-md-6">
                     <label for="inputCity" className="form-label">City</label>

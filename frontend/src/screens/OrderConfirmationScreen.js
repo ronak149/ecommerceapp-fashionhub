@@ -97,7 +97,7 @@ const OrderConfirmationScreen = () => {
                                                     <p className="card-text fs-6 fw-semibold">$ {(item.price).toFixed(2)}</p>
                                                 </div>
                                                 <div className="col-12 mb-2">
-                                                    <p className="card-text">$ {item.description}</p>
+                                                    <p className="card-text">{item.description}</p>
                                                 </div>
                                                 <hr />
                                                 <div className="col-12 mb-2">

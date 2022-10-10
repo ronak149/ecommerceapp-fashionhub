@@ -6,6 +6,7 @@ import Order from '../models/orderModel.js';
 const orderRouter = express.Router();
 
 orderRouter.post('/', isAuth, expressAsyncHandler(async (req, res) => {   
+    console.log('reched here');
     const newOrder = new Order({
         orderItems: req.body.orderItems.map((item) => ({ ...item, product: item._id })),
         shippingAddress: req.body.shippingAddress,
@@ -16,8 +17,14 @@ orderRouter.post('/', isAuth, expressAsyncHandler(async (req, res) => {
         totalPrice: req.body.totalPrice,
         user: req.user._id,
     })
-    const order = await newOrder.save();
-    res.status(201).send({ message: 'New Order Created', order });
+    try{
+        const order = await newOrder.save();
+        res.status(201).send({ message: 'New Order Created', order });
+    }
+    catch (err) {
+        res.status(400).send(err.message);
+    }
+
 }));
 
 orderRouter.get('/mine', isAuth, expressAsyncHandler(async (req,res) => {

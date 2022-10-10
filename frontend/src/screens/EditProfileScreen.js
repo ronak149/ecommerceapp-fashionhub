@@ -75,11 +75,28 @@ const EditProfileScreen = () => {
                 <div className="col-md-1"></div>
 
                 <div className="col-md-1"></div>
-                <div className="col-md-10">
-                    <label htmlFor="email-signup" className="form-label" >Email</label>
-                    <input type="text" className="form-control" id="email-signup" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                <div className="col-md-10 text-center">
+                    <button className="btn-fill rounded" type="submit">Update Name</button>
                 </div>
                 <div className="col-md-1"></div>
+                <div className="col-md-12"></div>
+
+                <hr />
+
+                <div className="col-md-1"></div>
+                <div className="col-md-10">
+                    <label htmlFor="email-signup" className="form-label" >Email</label>
+                    <input type="text" className="form-control" id="email-signup" value={email} onChange={(e) => setEmail(e.target.value)} required />                    
+                </div>
+                <div className="col-md-1"></div>
+                <div className="col-md-1"></div>
+                <div className="col-md-10 text-center">
+                    <button className="btn-fill rounded" type="submit">Update Email</button>
+                </div>
+                <div className="col-md-1"></div>
+                <div className="col-md-12"></div>
+
+                <hr />
 
                 <div className="col-md-1"></div>
                 <div className="col-md-10">
@@ -96,8 +113,8 @@ const EditProfileScreen = () => {
                 <div className="col-md-1"></div>
 
                 <div className="col-md-1"></div>
-                <div className="col-md-10 text-center ">
-                    <button className="btn-fill rounded" type="submit">Update</button>
+                <div className="col-md-10 text-center">
+                    <button className="btn-fill rounded" type="submit">Update Password</button>
                 </div>
                 <div className="col-md-1"></div>
 

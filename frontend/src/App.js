@@ -19,6 +19,7 @@ import OrderConfirmationScreen from './screens/OrderConfirmationScreen.js';
 import OrderHistoryScreen from './screens/OrderHistoryScreen.js';
 import ProfileScreen from './screens/ProfileScreen.js';
 import EditProfileScreen from './screens/EditProfileScreen.js';
+import SearchScreen from './screens/SearchScreen.js';
 
 function App() {
 
@@ -44,6 +45,8 @@ function App() {
             <Route path="/orderHistory" element={<OrderHistoryScreen />} />
             <Route path="/edit-profile" element={<EditProfileScreen />} />
             <Route path="/profile" element={<ProfileScreen />} />
+            <Route path="/search/products/:slug" element={<ProductInfoScreen />} />
+            <Route path="/search" element={<SearchScreen />} />
             <Route path="/" element={<HomeScreen />} />
           </Routes>
         </main>

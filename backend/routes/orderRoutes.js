@@ -6,7 +6,6 @@ import Order from '../models/orderModel.js';
 const orderRouter = express.Router();
 
 orderRouter.post('/', isAuth, expressAsyncHandler(async (req, res) => {   
-    console.log('reched here');
     const newOrder = new Order({
         orderItems: req.body.orderItems.map((item) => ({ ...item, product: item._id })),
         shippingAddress: req.body.shippingAddress,
@@ -22,6 +21,7 @@ orderRouter.post('/', isAuth, expressAsyncHandler(async (req, res) => {
         res.status(201).send({ message: 'New Order Created', order });
     }
     catch (err) {
+        console.log(err.message);
         res.status(400).send(err.message);
     }
 

@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import SearchBox from "../components/SearchBox";
 import { Store } from "../Store";
 
 const HeaderScreen = () => {
@@ -23,7 +24,7 @@ const HeaderScreen = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
 
-                    <div className="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style={{width: '80vw'}}>
+                    <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style={{width: '80vw'}}>
                         <div className="offcanvas-header">
                             <h5 className="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
                             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -44,7 +45,11 @@ const HeaderScreen = () => {
                                     <Link className="nav-link" to="Sale/">Sale</Link>
                                 </li>
                             </ul>
-                            <form className="d-flex">
+                            <SearchBox />
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            <form className="d-flex align-items-center">
                                 { userInfo ? 
                                 (<div className="dropdown">
                                     <Link className="nav-link text-secondary dropdown-toggle text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
@@ -57,7 +62,7 @@ const HeaderScreen = () => {
                                         <li><Link className="dropdown-item text-secondary" to="/" onClick={signoutHandler}>Sign Out</Link></li>
                                     </ul>
                                 </div>) 
-                                : (<Link className="nav-link text-secondary text-decoration-none" to="/SignIn"><i className="bi bi-person"></i></Link>)} &nbsp; &nbsp; &nbsp; 
+                                : (<Link className="nav-link text-secondary text-decoration-none" to="/SignIn">Sign In &nbsp;<i className="bi bi-person"></i></Link>)} &nbsp; &nbsp; &nbsp; 
                                   
                                 <Link className="nav-link text-secondary text-decoration-none" to="/cart">{'| '} &nbsp; &nbsp; &nbsp; &nbsp;<i className="bi bi-bag fs-6"></i> {cart.cartItems.length > 0 && cart.cartItems.reduce((a, c) => a + c.quantity, 0)}</Link>
                             </form>

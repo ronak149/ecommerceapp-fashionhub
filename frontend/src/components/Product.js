@@ -23,7 +23,7 @@ const Product = (props) => {
     }
 
     return (
-        <div className="card cardWidth" key={product.slug}>
+        <div className="card p-0 cardWidth" key={product.slug}>
             <div className="card-image-container">
                 <Link to={`products/${product.slug}`}>
                     <img src={`products/${product.src}`} alt={product.title} className="card-img-top card-image img-thumbnail rounded"/>

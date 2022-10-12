@@ -113,7 +113,7 @@ const OrderSummaryScreen = () => {
                 dispatch({ type: 'CREATE_SUCCESS'});
                 localStorage.removeItem('cartItems');
                 navigate(`/order/${orderId}`);
-                toast.success('Order is paid');
+                toast.success('Payment successful !');
             }
             catch (err) {
                 dispatch({ type: 'PAY_FAIL' });

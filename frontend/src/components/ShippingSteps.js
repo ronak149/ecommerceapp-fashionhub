@@ -6,10 +6,7 @@ const ShippingSteps = (props) => {
     return (
         <>
             { createdAt ? 
-            (<div className="row">
-                <p className="card-text col-7 fw-semibold">Processed on: &nbsp; {createdAt.slice(0,10)}</p>
-                <p className="card-text col-4 fw-semibold"  style={{color: '#00c900'}}><i class="bi bi-check-circle-fill"></i>&nbsp; {' '} Item Processed </p>
-            </div>)
+            (<p className="card-text col-7 fw-semibold">Processed on: &nbsp; {createdAt.slice(0,10)}</p>)
             : (<> </>)}
 
             { isShipped ? 

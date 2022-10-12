@@ -54,15 +54,15 @@ const FooterScreen = () => {
                         <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-3">
                             <h6 className="fw-semibold mb-4 ">Contact</h6>
                             <p>
-                                <i class="bi bi-house-fill">{' '}</i>
+                                <i className="bi bi-house-fill">{' '}</i>
                                 &nbsp; Etobicoke, Ontario, CA
                             </p>
                             <p>
-                                <i class="bi bi-envelope-fill">{' '}</i>
+                                <i className="bi bi-envelope-fill">{' '}</i>
                                 &nbsp; info@fhub.com
                             </p>
                             <p>
-                                <i class="bi bi-telephone-fill"> {' '} </i>
+                                <i className="bi bi-telephone-fill"> {' '} </i>
                                 &nbsp; + 01 234 567 89
                             </p>
                         </div>

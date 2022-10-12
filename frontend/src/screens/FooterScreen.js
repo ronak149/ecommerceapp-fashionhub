@@ -31,7 +31,7 @@ const FooterScreen = () => {
                 <div className="container text-center text-md-start">
                     <div className="row ">
                         <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-3 text-center">
-                            <img className="mb-3" src={process.env.PUBLIC_URL + "/logo-full.png"} alt="Blue Tagged Logo" width="160" height="135" />
+                            <img className="mb-3" src={process.env.PUBLIC_URL + "/logo-full.PNG"} alt="Blue Tagged Logo" width="160" height="135" />
                             <p>
                                 Exclusive store for branded clothing and accessories.
                             </p>

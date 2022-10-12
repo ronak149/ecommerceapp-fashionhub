@@ -19,7 +19,7 @@ const HeaderScreen = () => {
             <div className="row text-white fs-6 p-2 text-center" style={{backgroundColor: '#311b92'}}><small>Get free delivery on orders over $100</small></div>
             <nav className="navbar navbar-expand-lg navbar-light bg-white">
                 <div className="container-fluid">
-                    <Link className="navbar-brand logo m-0 p-0" to="/"><img src={process.env.PUBLIC_URL + "/logo-image.png"} alt="Blue Tagged Logo" width="50" height="50" /></Link>
+                    <Link className="navbar-brand logo m-0 p-0" to="/"><img src={process.env.PUBLIC_URL + "/logo-image.PNG"} alt="Blue Tagged Logo" width="50" height="50" /></Link>
                     <button className="navbar-toggler collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

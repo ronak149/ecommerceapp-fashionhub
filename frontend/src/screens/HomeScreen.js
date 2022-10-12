@@ -160,7 +160,7 @@ const HomeScreen = () => {
               <div className="col-12">
               <div className="card p-0 ">
                 <div className="overflow-hidden rounded" >
-                  <img src={process.env.PUBLIC_URL + "/assets/wardrobe.jpg"} alt="Wardrobe" className="img-fluid rounded"/>
+                  <img src={process.env.PUBLIC_URL + "/assets/wardrobe.JPG"} alt="Wardrobe" className="img-fluid rounded"/>
                 </div>
                 <div className="card-img-overlay m-1 p-0">
                         <div className="row text-center align-items-center" style={{width: '100%', height: '100%'}}>

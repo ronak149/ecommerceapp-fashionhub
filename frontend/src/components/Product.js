@@ -23,7 +23,7 @@ const Product = (props) => {
     }
 
     return (
-        <div className="card p-0 cardWidth" key={product.slug}>
+        <div className="card shadow p-0 cardWidth" key={product.slug}>
             <div className="card-image-container">
                 <Link to={`products/${product.slug}`}>
                     <img src={`products/${product.src}`} alt={product.title} className="card-img-top card-image img-thumbnail rounded"/>
@@ -47,7 +47,19 @@ const Product = (props) => {
                         <p className="card-text">{product.color}</p>
                     </div>
                 </div>
-                {product.quantityInStock === 0 ? <button className="card-btn rounded fw-semibold" style={{color: '#311b92'}} disabled >Out of stock</button> : <button type="button" className="card-btn rounded fw-semibold"  onClick={() => addToCartHandler(product)} style={{width: "100%"}}>Add to Cart</button> }
+                <div className="row g-2 p-0 m-0">
+                    <div className="col-6 text-center p-0 m-0">
+                        <div className="row m-0">
+                            <Link className="btn-outline rounded-start fw-semibold" to={`products/${product.slug}`}><i className="bi bi-receipt fw-semibold"></i>{' '}View Product</Link>
+                        </div>
+                    </div>
+                    <div className="col-6 text-center p-0 m-0">
+                        <div className="row m-0">
+                            {product.quantityInStock === 0 ? <Link className="btn-outline rounded-end fw-semibold" disabled >Out of stock</Link> : <Link className="btn-outline rounded-end fw-semibold"  onClick={() => addToCartHandler(product)}><i className="bi bi-cart-plus fw-semibold"></i> {' '}Add to Cart</Link> }
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     );

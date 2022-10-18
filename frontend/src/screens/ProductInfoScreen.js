@@ -64,7 +64,7 @@ const ProductInfoScreen = () => {
         <div className="card" >
             <div className="row m-3 g-2">
                 <div className="col-md-4" style={{textAlign: 'center', overflow: 'hidden', margin: 'auto'}}>
-                    <img className="img-thumbnail img-fluid" src={product.src} alt={product.title} style={{height: '75vh', width: '65vh'}} />
+                    <img className="img-thumbnail img-fluid" src={process.env.PUBLIC_URL + '/products/' + product.src} alt={product.title} style={{height: '75vh', width: '65vh'}} />
                 </div>
                 <div className="col-md-8 d-flex flex-column justify-content-between card-body" style={{padding: '2rem'}}>
                     <div className="row mb-2">

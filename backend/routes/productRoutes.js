@@ -1,13 +1,46 @@
 import express, { query } from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import Product from '../models/productModel.js';
+import { isAdmin, isAuth } from '../utils.js';
 
 const productRouter = express.Router();
 
 productRouter.get('/', async (req, res) => {
-    const products = await Product.find();
-    res.send(products);
+    try {
+        const products = await Product.find();
+        res.send(products);
+    }
+    catch(err) {
+        res.status(401).send({ message: 'Failed to load products !' });
+    }    
 });
+
+productRouter.post('/', isAuth, isAdmin, expressAsyncHandler(async (req, res) => {
+    const newproduct = new Product ({
+        slug:'Sample0-Name'+ Date.now(),
+        gender: 'Sample-Gender',
+        category: 'Sample-Category',
+        collectionSeason: 'Sample-Collection',
+        onSale: true,
+        discount: 75,
+        title: 'Sample-Title',
+        price: 50,
+        color: 'Sample-Color',
+        src: 'mens-basic-tees.jpg',
+        quantityInStock: 0,
+        ratings: 0,
+        numOfReviews: 0,
+        description: 'Sample-Desc',
+    });
+
+    try {
+        const product = await newproduct.save();
+        res.send({ message: 'Product created', product});
+    }
+    catch (err) {
+        res.status(401).send({message: 'Product creation failed!'});
+    }    
+}))
 
 productRouter.get('/search', expressAsyncHandler(async (req, res) => {
     const {query} = req;
@@ -61,20 +94,26 @@ productRouter.get('/search', expressAsyncHandler(async (req, res) => {
         ? { createdAt: -1 }
         : { _id: -1 };
 
+    try {
+        const products = await Product.find({
+            ...genderFilter,
+            ...typeFilter,
+            ...queryFilter,
+            ...collectionFilter,
+            ...colorFilter,
+            ...categoryFilter,
+            ...priceFilter,
+            ...ratingFilter,
+        })
+        .sort(sortOrder);
+    
+        res.send({products});
+    }
+    catch(err) {
+        res.status(401).send({ message: 'Product not found !' });
+    } 
 
-    const products = await Product.find({
-        ...genderFilter,
-        ...typeFilter,
-        ...queryFilter,
-        ...collectionFilter,
-        ...colorFilter,
-        ...categoryFilter,
-        ...priceFilter,
-        ...ratingFilter,
-    })
-    .sort(sortOrder);
-
-    res.send({products});
+    
 }));
 
 productRouter.get('/categories', expressAsyncHandler( async (req, res) => {
@@ -90,9 +129,51 @@ productRouter.get('/slug/:slug', async (req, res) => {
         res.send(product);
     }
     else {
-        res.status(404).send({message: 'Product Not Found'})
+        res.status(404).send({message: 'Product not found!'});
     }
-})
+});
+
+productRouter.put('/:id',  isAuth, isAdmin, expressAsyncHandler (async (req, res) => {
+    const productId = req.params.id;
+    const product = await Product.findById(productId);
+    if(product) {
+        product.title = req.body.title;
+        product.gender = req.body.gender;
+        product.category = req.body.category;
+        product.color = req.body.color;
+        product.slug = req.body.slug;
+        product.price = req.body.price;
+        product.src = req.body.src;
+        product.quantityInStock = req.body.quantityInStock;
+        product.collectionSeason = req.body.collectionSeason;
+        product.onSale = req.body.onSale;
+        product.discount = req.body.discount;
+        product.ratings = req.body.ratings;
+        product.description = req.body.description;
+        try {
+            await product.save();
+            res.send({ message: 'Product updated successfully!'});
+        }
+        catch(err){
+            console.log(err.message);
+        }
+        
+    }
+    else {
+        res.status(404).send({ message: 'Product not found!'});
+    }
+}));
+
+productRouter.delete('/:id', isAuth, isAdmin, expressAsyncHandler(async (req, res) => {
+    const product = await Product.findById(req.params.id);
+    if(product) {
+        await product.remove();
+        res.send({ message: 'Product deleted!'});
+    }
+     else {
+        res.status(404).send({ message: 'Product not found!' });
+     }
+}));
 
 productRouter.get('/:id', async (req, res) => {
     const product = await Product.findById(req.params.id);
@@ -102,6 +183,6 @@ productRouter.get('/:id', async (req, res) => {
     else {
         res.status(404).send({message: 'Product Not Found'})
     }
-})
+});
 
 export default productRouter;

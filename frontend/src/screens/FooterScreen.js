@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const FooterScreen = () => {
     return (
-        <footer className="text-center text-lg-start ">
+        <footer className="text-center m-0 text-lg-start ">
             <hr />
             <section className="d-flex justify-content-center justify-content-lg-between p-2">
                 <div className="me-5 d-none d-lg-block">

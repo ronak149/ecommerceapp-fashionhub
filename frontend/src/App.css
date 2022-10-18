@@ -42,7 +42,8 @@ nav {
 .category-links {
   text-decoration: none;
   color: grey;
-  font-size: 12px;
+  font-size: 0.9rem;
+  padding-top: 3px;
 }
 
 .category-links:hover {
@@ -109,13 +110,20 @@ nav {
   border: 1px solid #311b92;
   transition-duration: 0.4s;
   height: 2.5rem;
-  width: 10rem;
+  width: 11rem;
 }
 
 .btn-fill:hover {
   color: #311b92;
   background-color: white;
   border: 1px solid #311b92;
+}
+
+.btn-fill:disabled {
+  color: white;
+  background-color: #311b92;
+  border: 1px solid #311b92;  
+  opacity: 0.5;
 }
 
 .btn-outline {
@@ -131,6 +139,35 @@ nav {
   color: white;
   background-color: #311b92;
   border: 1px solid #311b92;
+}
+
+.btn-outline:active {
+  color: white;
+  background-color: #311b92;
+  border: 1px solid #311b92;
+}
+
+.btn-outline-sidenav {
+  color: #311b92;
+  text-decoration: none;
+  background-color: white;
+  padding: 0.5rem;
+  transition-duration: 0.4s;
+  width: 100%;
+}
+
+.btn-outline-sidenav:hover {
+  color: white;
+  background-color: #311b92;
+}
+
+.sidenav-active {
+  color: white;
+  background-color: #311b92;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #311b92;
 }
 
 .slider::-webkit-slider-thumb {

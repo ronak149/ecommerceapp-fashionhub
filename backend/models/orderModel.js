@@ -57,9 +57,11 @@ const orderSchema = new mongoose.Schema(
 
         isShipped: { type: Boolean, default: false},
 
+        shippedOn: { type: Date },
+
         isDelivered: { type: Boolean, default: false},
 
-        deliveredAt: { type: Date },
+        deliveredOn: { type: Date },
 
     },
 

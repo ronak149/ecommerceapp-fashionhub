@@ -2,9 +2,25 @@ import express from 'express';
 import User from '../models/userModel.js';
 import expressAsyncHandler from 'express-async-handler';
 import bcrypt from 'bcryptjs';
-import { generateToken, isAuth } from '../utils.js';
+import { generateToken, isAdmin, isAuth } from '../utils.js';
 
 const userRouter = express.Router();
+
+userRouter.get('/', isAuth, isAdmin, expressAsyncHandler(async (req, res) => {
+    try {
+        const users = await User.find({});
+        if(users) {
+            res.send(users);
+        }
+        else {
+            res.status(404).send({message: 'No users found'});
+        }
+    }
+    catch(err) {
+        console.log(err.message);
+    }
+    
+}));
 
 userRouter.post('/signin', expressAsyncHandler(async (req, res) => {
     const user = await User.findOne({ email: req.body.email });
@@ -15,6 +31,7 @@ userRouter.post('/signin', expressAsyncHandler(async (req, res) => {
                 name: user.name,
                 email: user.email,
                 isAdmin: user.isAdmin,
+                createdAt: user.createdAt,
                 token: generateToken(user)
             });
             return;
@@ -67,6 +84,17 @@ userRouter.put('/update-profile', isAuth, expressAsyncHandler(async (req, res) =
     else {
         res.status(404).send({message: 'User not found'});
     }
+}));
+
+userRouter.delete('/:id', isAuth, isAdmin, expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+    if(user) {
+        await user.remove();
+        res.send({ message: 'User deleted!'});
+    }
+     else {
+        res.status(404).send({ message: 'User not found!' });
+     }
 }));
 
 export default userRouter;

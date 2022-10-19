@@ -30,31 +30,40 @@ const AboutUsScreen = () => {
             </section>
 
             <section className="row p-2 g-2" style={{ backgroundColor: '#311b9215' }}>
-                <h3 className="fw-semibold text-center mt-2 "><br />Our Promise <br /> <br /> </h3>
-                <div className="col-3 p-3">
-                    <h6 className="text-center mb-2"><i class="bi fs-1 bi-award fw-semibold text-indigo"></i></h6>
-                    <h6 className="text-center fs-5 mb-2 fw-semibold text-indigo">Best Quality</h6> <br />
-                    <p className="text-center">Its our promise to you to serve you with the premium quality material</p>
+                <h3 className="fw-semibold text-center mt-2 "><br />Our Promise<br /> <br /> </h3>
+                <div className="col-md-6">
+                    <div className="row">
+                        <div className="col-6 p-3">
+                            <h6 className="text-center mb-2"><i class="bi fs-1 bi-award fw-semibold text-indigo"></i></h6>
+                            <h6 className="text-center fs-5 mb-2 fw-semibold text-indigo">Best Quality</h6> <br />
+                            <p className="text-center">Its our promise to you to serve you with the premium quality material</p>
+                        </div>
+
+                        <div className="col-6 p-3">
+                            <h6 className="text-center mb-2"><i class="bi fs-1 bi-gift fw-semibold text-indigo"></i></h6>
+                            <h6 className="text-center fs-5 mb-2 fw-semibold text-indigo">Rewards</h6><br />
+                            <p className="text-center">Looking for a deal? Sign up for our rewards program and get discounts</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div className="col-3 p-3">
-                    <h6 className="text-center mb-2"><i class="bi bi-truck fw-semibold text-indigo fs-1"></i></h6>
-                    <h6 className="text-center fs-5 mb-2 fw-semibold text-indigo">Express Shipping</h6><br />
-                    <p className="text-center">Get timely delivery with our express shipping and get free delivery on orders over $100</p>
-                </div>
+                <div className="col-md-6">
+                    <div className="row">
+                        <div className="col-6 p-3">
+                            <h6 className="text-center mb-2"><i class="bi bi-truck fw-semibold text-indigo fs-1"></i></h6>
+                            <h6 className="text-center fs-5 mb-2 fw-semibold text-indigo">Express Shipping</h6><br />
+                            <p className="text-center">Get timely delivery with our express shipping and get free delivery on orders over $100</p>
+                        </div>
 
-                <div className="col-3 p-3">
-                    <h6 className="text-center mb-2"><i class="bi fs-1 bi-gift fw-semibold text-indigo"></i></h6>
-                    <h6 className="text-center fs-5 mb-2 fw-semibold text-indigo">Rewards</h6><br />
-                    <p className="text-center">Looking for a deal? You can sign up for our rewards program and get discounts all year around</p>
-                </div>
-
-                <div className="col-3 p-3">
-                    <h6 className="text-center mb-2"><i class="bi fs-1 bi-bookmark-star fw-semibold text-indigo"></i></h6>
-                    <h6 className="text-center fs-5 mb-2 fw-semibold text-indigo">Gaurantee</h6><br />
-                    <p className="text-center">Not what you expected? Dont worry ! We have got you covered with our 30 day Money Back Gaurantee</p>
+                        <div className="col-6 p-3">
+                            <h6 className="text-center mb-2"><i class="bi fs-1 bi-bookmark-star fw-semibold text-indigo"></i></h6>
+                            <h6 className="text-center fs-5 mb-2 fw-semibold text-indigo">Gaurantee</h6><br />
+                            <p className="text-center">Not what you expected? We have got you covered with our 30 day Money Back Gaurantee</p>
+                        </div>
+                    </div>
                 </div>
             </section>
+
             <section className="row shadow m-2  g-2 p-2" style={{ backgroundColor: '#311b9215' }}>
                 <br />
                 <br />
@@ -120,7 +129,7 @@ const AboutUsScreen = () => {
                     <div class="row mb-2 p-2 text-center d-inline-block float-end"><button className="btn-outline rounded d-inline-block">Submit</button></div>
                 </div>
             </section>
-            <FooterScreen/>
+            <FooterScreen />
         </main>
     )
 }

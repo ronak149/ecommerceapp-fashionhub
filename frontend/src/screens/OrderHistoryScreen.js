@@ -142,7 +142,7 @@ const OrderHistoryScreen = () => {
                                                                             </div>
                                                                         </div>
                                                                         <div className="col-12">
-                                                                            <ShippingSteps value={order.isShipped ? (order.isDelivered ? 100 : 50) : 17} createdAt={order.createdAt} shippedOn={order.shippedOn} deliveredOn={order.deliveredOn} />
+                                                                            <ShippingSteps value={order.isShipped ? (order.isDelivered ? 100 : 50) : 17} createdAt={order.createdAt} isShipped={order.isShipped} isDelivered={order.isDelivered} shippedOn={order.shippedOn} deliveredOn={order.deliveredOn} />
                                                                         </div>
                                                                     </div>
                                                                 </div>

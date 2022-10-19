@@ -32,10 +32,10 @@ function App() {
 
   return (
     <Router>
-    <div className="App" >
+    <div className="App m-0" >
       <ToastContainer position="bottom-center" limit={1} autoClose={1500} />
       <HeaderScreen />
-        <main>
+        <main className='m-0'>
           <Routes>
             <Route path="Mens/products/:slug" element={<ProductInfoScreen />} />
             <Route path="Mens/" element={<MensProductsScreen />} />

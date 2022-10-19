@@ -118,8 +118,8 @@ const SearchScreen = () => {
         <div className='row m-2 mt-0 g-2'>
 
             <div className="col-md-2 m-0 border-end">
-                <span className='float-end'><button className="btn btn-outline-dark d-lg-none fw-semibold" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"> Filter Items &nbsp; <i className="bi bi-sliders "></i></button></span>
-                <div className="offcanvas-lg m-0 offcanvas-end" tabIndex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+                
+                <div className="offcanvas-lg m-0 offcanvas-end" tabIndex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel" style={{maxWidth: '80vw'}} >
                     <div className="offcanvas-header">
                         <h5 className="offcanvas-title fw-semibold" id="offcanvasResponsiveLabel">Filter Items:</h5>
                         <button type="button" className="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
@@ -219,12 +219,16 @@ const SearchScreen = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="offcanvas-header">
+                        <button type="button" className="btn-outline m-0 px-2 py-1 rounded" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"> Apply Filter &nbsp; <i class="bi bi-sliders"></i></button>
+                        <button className="btn-outline m-0 px-2 py-1 rounded" onClick={() => navigate('/search')}> Remove Filter&nbsp; <i class="bi bi-trash3-fill"></i></button>
+                    </div>
                 </div>
             </div>
 
             <div className="col-md-10 mt-0 p-3">
                 <div className="row">
-                    <div className='col-md-6 mb-1'>
+                    <div className='col-md-12 mb-1'>
                         <p className='fw-semibold'>Active filters:
                             {gender !== 'all' && ' + ' + gender + "'s "}
                             {type !== 'all' && ' + ' + type}
@@ -234,12 +238,13 @@ const SearchScreen = () => {
                             {category !== 'all' && ' + ' + category}
                             {price !== 'all' && ' + Price ' + price}
                             {gender !== 'all' || type !== 'all' ||query !== 'all' || category !== 'all' || price !== 'all' || collection !== 'all' || color !== 'all' ?
-                                (<button className="btn p-0 m-0" onClick={() => navigate('/search')}>&nbsp;<i className="bi bi-x-circle-fill fs-6"></i></button>) : null}
-                            &nbsp; <span className='float-end'><button className="btn btn-outline-dark d-lg-none fw-semibold" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"> Filter Items &nbsp; <i className="bi bi-sliders "></i></button></span></p>
+                                (<><button className="btn p-0 m-0" onClick={() => navigate('/search')}>&nbsp;<i className="bi bi-x-circle-fill fs-6"></i></button> <hr /> </>) : null} </p>
+                            
                     </div>
-                    <div className="col-md-6 mb-1 text-end">
+                    <div className='col-5 mb-1 text-center d-flex justify-content-center align-items-center'><span className='text-center'><button className="btn py-1 px-2 btn-outline d-lg-none fw-semibold" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"> Filter &nbsp; <i className="bi bi-sliders "></i></button></span></div>
+                    <div className="col-7 text-end">
                         <div className="form-group">
-                            <label className=" d-inline-block form-check-label" htmlFor="sort-by">Sort by: &nbsp;</label>
+                            <small><label className=" d-inline-block form-check-label" htmlFor="sort-by">Sort by: &nbsp;</label></small>
                             <select id="sort-by" className="w-auto d-inline-block form-select-sm form-select" aria-label="Default select example" value={order} onChange={(e) => { navigate(getFilterUrl({ order: e.target.value })) }}>
                                 <option className="select-options" defaultValue value="newest">New Arrivals</option>
                                 <option className="select-options" value="lowest">Price: Low to High</option>
@@ -247,9 +252,9 @@ const SearchScreen = () => {
                                 <option className="select-options" value="toprated">Customer Ratings</option>
                             </select>
                         </div>
+                        <br/>
                     </div>
                     <div id="product-container" className="d-flex flex-row justify-content-around flex-wrap align-content-around">
-
                         {loading ? <LoadingProductCard /> : products.length === 0 && (
                             <div className="row p-2">
                                 <div className="col-9">

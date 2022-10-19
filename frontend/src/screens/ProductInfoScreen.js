@@ -64,7 +64,7 @@ const ProductInfoScreen = () => {
         <div className="card" >
             <div className="row m-3 g-2">
                 <div className="col-md-4" style={{textAlign: 'center', overflow: 'hidden', margin: 'auto'}}>
-                    <img className="img-thumbnail img-fluid" src={process.env.PUBLIC_URL + '/products/' + product.src} alt={product.title} style={{height: '75vh', width: '65vh'}} />
+                    <img className="img-thumbnail img-fluid" src={process.env.PUBLIC_URL + '/products/' + product.src} alt={product.title} style={{maxHeight: '75vh', width: '65vh'}} />
                 </div>
                 <div className="col-md-8 d-flex flex-column justify-content-between card-body" style={{padding: '2rem'}}>
                     <div className="row mb-2">
@@ -80,7 +80,7 @@ const ProductInfoScreen = () => {
                             <h5 className="">{product.color} | Large</h5>
                     </div>
                     <div className="row mb-2">
-                            <h3 className=""><i className="bi bi-star-fill"></i><i className="bi bi-star-fill"></i><i className="bi bi-star-fill"></i><i className="bi bi-star-fill"></i><i className="bi bi-star-half"></i> <span style={{fontSize: '1rem', paddingLeft: '1rem'}}>{product.numOfReviews} reviews</span></h3>
+                            <h3 className=""><i className="bi text-warning bi-star-fill"></i><i className="bi text-warning bi-star-fill"></i><i className="bi text-warning bi-star-fill"></i><i className="bi text-warning bi-star-fill"></i><i className="bi text-warning bi-star-half"></i> <span style={{fontSize: '1rem', paddingLeft: '1rem'}}>{product.numOfReviews} reviews</span></h3>
                     </div>
                     <div className="row mb-2">
                             <h6 className="">{product.description}</h6>

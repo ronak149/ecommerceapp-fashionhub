@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import SearchBox from "../components/SearchBox";
 import { Store } from "../Store";
@@ -17,37 +17,10 @@ const HeaderScreen = () => {
         navigate('/SignIn')
     }
 
-    const [show, setShow] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
-
-    const controlNavbar = () => {
-        if (typeof window !== 'undefined') { 
-        if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
-            setShow(false); 
-        } else { // if scroll up show the navbar
-            setShow(true);  
-        }
-
-        // remember current page location to use in the next move
-        setLastScrollY(window.scrollY); 
-        }
-    };
-
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-        window.addEventListener('scroll', controlNavbar);
-
-        // cleanup function
-        return () => {
-            window.removeEventListener('scroll', controlNavbar);
-        };
-        }
-    }, [lastScrollY]);
-
     return (
-        <header className="App-header border-bottom p-0">
-            <div className="row text-white p-2 text-center" style={{backgroundColor: '#311b92'}}><small>Get free delivery on orders over $100</small></div>
-            <nav className={`navbar navbar-expand-lg navbar-light bg-white active ${show && 'hidden'}`}>
+        <header className="App-header m-0 border-bottom p-0">
+            <div className="row text-white m-0 p-2 text-center" style={{backgroundColor: '#311b92'}}><small>Get free delivery on orders over $100</small></div>
+            <nav className={`navbar navbar-expand-lg navbar-light bg-white active`}>
                 <div className="container-fluid">
                     <Link className="navbar-brand logo m-0 p-0" to="/"><img src={process.env.PUBLIC_URL + "/logo-image.PNG"} alt="Blue Tagged Logo" width="50" height="50" /></Link>
                     <button className="navbar-toggler collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +29,7 @@ const HeaderScreen = () => {
 
                     <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style={{width: '80vw'}}>
                         <div className="offcanvas-header">
-                            <h5 className="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+                        <Link className="navbar-brand logo m-0 p-0" to="/"><img src={process.env.PUBLIC_URL + "/logo-full.PNG"} alt="Blue Tagged Logo" width="100" height="100" /></Link>
                             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div className="offcanvas-body">
@@ -110,7 +83,7 @@ const HeaderScreen = () => {
                                         <li><Link className="dropdown-item text-secondary" to="/" onClick={signoutHandler}>Sign Out</Link></li>
                                     </ul>
                                 </div>) 
-                                : (<span><Link className="nav-link d-inline-block text-secondary text-decoration-none" to="/SignIn">Sign in &nbsp; &nbsp; |</Link><Link className="nav-link d-inline-block text-secondary text-decoration-none" to="/SignIn">Create account</Link></span>)} 
+                                : (<span><Link className="nav-link d-inline-block text-secondary text-decoration-none" to="/SignIn">Sign in &nbsp; &nbsp; |</Link><Link className="nav-link d-inline-block text-secondary text-decoration-none" to="/SignUp">Create account</Link></span>)} 
                                 &nbsp; &nbsp;                             
                                 <Link className="nav-link text-secondary text-decoration-none" to="/cart"> &nbsp; &nbsp; &nbsp; <i className="fs-5 bi bi-handbag"></i> &nbsp; {cart.cartItems.length > 0 && cart.cartItems.reduce((a, c) => a + c.quantity, 0)}</Link>
                             </form>
